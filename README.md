@@ -1,4 +1,4 @@
-# 💊 Pharmaceutical Sales Performance Dashboard (Microsoft Excel)
+# 💊 Pharmaceutical Sales Performance Dashboard
 
 ## 📖 Overview
 
