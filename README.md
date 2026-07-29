@@ -1,99 +1,258 @@
-# 💊 Pharmaceutical Sales Performance Dashboard
+# 💊 Pharmaceutical Sales & Commercial Performance Dashboard
 
 ## 📖 Overview
 
-This project showcases an interactive **Microsoft Excel dashboard** built to analyze pharmaceutical sales data from multiple business perspectives. The dashboard provides a consolidated view of sales performance, distributor contribution, product portfolio, sales channels, and product returns, enabling users to identify trends and make informed business decisions.
+This project is an interactive **Microsoft Excel dashboard** and **commercial analytics workbook** built to analyze pharmaceutical sales performance across the **Germany** and **Poland** markets. It combines traditional business intelligence reporting with formula-driven commercial analytics to simulate real-world pharmaceutical sales analysis.
 
-The dashboard demonstrates how Excel can be leveraged as a business intelligence tool through advanced data analysis and interactive visualizations.
-
----
-
-## 🎯 Objective
-
-The primary objective of this dashboard is to monitor pharmaceutical sales performance and answer key business questions such as:
-
-- How have sales changed throughout the year?
-- Which distributors contribute the highest share of revenue?
-- Which product classes perform the best?
-- Which sales channels generate maximum revenue?
-- Which distributors account for the highest product returns?
+The dashboard demonstrates how raw transactional data can be transformed into actionable business insights through segmentation, prioritization, performance evaluation, and incentive compensation modeling.
 
 ---
 
-## 📊 Dashboard Features
+## 🎯 Objectives
 
-### Executive KPIs
+The dashboard helps answer key business questions such as:
+
+- How have sales changed across markets and years?
+- Which distributors and customers contribute the most revenue?
+- How should distributors and customers be segmented for prioritization?
+- Which sales representatives are exceeding or missing expectations?
+- How can incentive compensation be modeled using sales attainment?
+- Which markets are growing, declining, or exiting?
+
+---
+
+## 🗂 Dataset
+
+The project uses a pharmaceutical wholesale–retail sales dataset containing transactional data across **Germany** and **Poland**.
+
+### Data Includes
+
+- Distributor
+- Customer (Hospital / Pharmacy)
+- Country & City
+- Channel & Sub-channel
+- Product Name & Product Class
+- Sales Representative, Manager & Team
+- Quantity Sold
+- Sales Revenue
+- Returns
+- Month & Year
+
+---
+
+# 📊 Dashboard Features
+
+### Executive KPI Cards
+
 - Total Sales
 - Total Returns
 - Return Rate
 
-### Sales Trend Analysis
-- Monthly sales trend across multiple years
-- Comparative year-over-year performance
+### Sales Performance
+
+- Monthly Sales Trend
+- Year-wise Sales Comparison (2018–2020)
 
 ### Distributor Analysis
-- Top distributors by sales contribution
-- Distributor-wise returns analysis
 
-### Product Performance
-- Sales by product class
-- Product class contribution to total revenue
+- Top Performing Distributors
+- Distributor Returns Analysis
+
+### Product Analysis
+
+- Sales by Product Class
 
 ### Channel Analysis
-- Sales distribution across:
-  - Government
-  - Private
-  - Institution
-  - Retail
+
+- Sales by Hospital & Pharmacy
+- Government, Private, Institution & Retail Comparison
+
+### Team Performance
+
+- Sales Contribution by Team
+- Sales by Manager
+- Returns by Team
+
+### Interactive Dashboard
+
+- Market Filter
+- Year Filter
+- Dynamic Pivot Charts
+- Interactive Slicers
 
 ---
 
-## 🛠 Tools Used
+# 🧮 Commercial Analytics Layer
+
+Beyond dashboard reporting, a dedicated commercial analysis sheet was developed using advanced Excel formulas to simulate real pharmaceutical commercial analytics workflows.
+
+## 1️⃣ Distributor Segmentation (Pareto Analysis)
+
+Distributors are categorized into:
+
+- **A – Strategic**
+- **B – Core**
+- **C – Long Tail**
+
+based on cumulative sales contribution using:
+
+- `RANK.EQ`
+- `SUMIF`
+- `IF`
+
+---
+
+## 2️⃣ Customer Segmentation
+
+Customers are classified into:
+
+- Key Account
+- Growth Account
+- Standard Account
+
+using sales rankings generated with:
+
+- `UNIQUE`
+- `XLOOKUP`
+- `RANK.EQ`
+
+---
+
+## 3️⃣ Distributor Prioritization Score
+
+A weighted prioritization model ranks distributors using:
+
+- **70% Sales Contribution**
+- **30% Return Rate Risk**
+
+to simulate distributor call-planning and engagement prioritization.
+
+---
+
+## 4️⃣ Sales Rep Performance & Incentive Compensation
+
+Each sales representative is evaluated using:
+
+- Sales Target Achievement
+- Attainment Percentage
+- Performance Tier
+- Incentive Payout
+
+Performance tiers include:
+
+- Top Performer
+- Core Performer
+- Developing
+
+Targets were assumed at **90% of actual sales** to simulate a real incentive compensation framework.
+
+---
+
+## 5️⃣ Market Growth Analysis
+
+Year-over-year growth is calculated using:
+
+- `SUMIFS`
+
+Results are validated against PivotTables to ensure consistency.
+
+---
+
+# 🧠 Excel Functions Used
+
+- XLOOKUP
+- INDEX / MATCH
+- SUMIFS
+- COUNTIFS
+- SUMPRODUCT
+- RANK.EQ
+- PERCENTILE
+- UNIQUE
+- LARGE
+- IF / IFS
+- IFERROR
+- TEXT
+- TRIM
+- EXACT
+- ISNUMBER
+
+---
+
+# 📈 Key Business Insights
+
+- A small number of distributors generate the majority of total sales, indicating strong market concentration.
+- **Poland generated sales only in 2018**, with no sales recorded in 2019 or 2020, suggesting a complete market exit or discontinued distribution partnership.
+- **Germany experienced approximately 4% growth in 2019** followed by **around 9% decline in 2020**, highlighting the need for deeper product and channel-level analysis.
+- Customer segmentation identified a limited number of **Key Accounts** contributing a significant share of total revenue.
+- Sales representative performance is relatively balanced across teams, supporting a fair and data-driven incentive compensation model.
+
+---
+
+# 🛠 Tools & Technologies
 
 - Microsoft Excel
-- Pivot Tables
-- Pivot Charts
+- PivotTables
+- PivotCharts
+- Power Query
 - Slicers
 - Conditional Formatting
-- Excel Formulas
-- Dashboard Design
+- Advanced Excel Formulas
 
 ---
 
-## 📈 Business Insights
+# 🚀 Skills Demonstrated
 
-- Monitor overall pharmaceutical sales performance using executive KPIs.
-- Compare sales trends across different years to identify growth patterns.
-- Recognize distributors driving the largest share of revenue.
-- Analyze product categories contributing most to total sales.
-- Evaluate sales performance across multiple distribution channels.
-- Identify distributors with higher return percentages for operational improvements.
-
-## 🚀 Skills Demonstrated
-
-- Advanced Microsoft Excel
+- Microsoft Excel
 - Dashboard Development
-- Data Cleaning
-- Data Analysis
-- Pivot Table Reporting
-- Interactive Data Visualization
 - KPI Reporting
-- Business Intelligence
-- Commercial Sales Analysis
+- Commercial Analytics
+- Pharmaceutical Sales Analytics
+- Customer & Distributor Segmentation
+- Incentive Compensation Modeling
+- Business Intelligence Reporting
+- Data Validation & Quality Assurance
+- Business Problem Solving
 
 ---
 
-## 📌 Future Improvements
+# 📌 Future Enhancements
 
 - Automated data refresh using Power Query
-- Regional sales analysis
-- Customer segmentation
-- Sales forecasting
-- Interactive drill-down reports
-- Inventory performance analysis
+- SQL integration for large-scale data processing
+- Python-based forecasting and predictive analytics
+- Region and sub-channel level drill-down analysis
+- Interactive what-if scenario modeling
 
 ---
 
-## 📄 Conclusion
+# 📷 Dashboard Preview
 
-This project demonstrates how Microsoft Excel can be used to transform raw pharmaceutical sales data into a professional and interactive business dashboard. By combining analytical techniques with intuitive visualizations, the dashboard supports data-driven decision-making and provides meaningful commercial insights.
+> Add screenshots of the dashboard here.
+
+Example:
+
+```
+Dashboard Images/
+├── Dashboard Overview.png
+├── Commercial Analysis.png
+└── Filters & KPIs.png
+```
+
+---
+
+# 📂 Project Structure
+
+```
+Pharmaceutical-Sales-Dashboard/
+│
+├── Pharmaceutical Sales Dashboard.xlsx
+├── Dashboard Preview.pdf
+├── Dashboard Images/
+├── README.md
+```
+
+---
+
+# 📄 Conclusion
+
+This project demonstrates how **Microsoft Excel** can serve as a powerful commercial analytics platform by combining traditional BI reporting with formula-driven business analysis. Through distributor and customer segmentation, prioritization models, market growth analysis, and sales incentive modeling, the project showcases decision-oriented analytics commonly used in pharmaceutical commercial organizations.
